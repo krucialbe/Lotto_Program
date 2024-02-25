@@ -1,6 +1,7 @@
 #ifndef LOTTO_PROGRAM_LOTTOCLASSES_H
 #define LOTTO_PROGRAM_LOTTOCLASSES_H
 
+//this shouldn't be the main branch
 
 #include <vector>
 

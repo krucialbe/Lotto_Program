@@ -4,6 +4,7 @@
 #include <ctime>
 #include <algorithm>
 
+//this shouldn't be the main branch
 
 PowerballNumberGenerator::PowerballNumberGenerator() {
     srand(time(nullptr)); // Initialize random seed
