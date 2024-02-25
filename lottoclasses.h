@@ -1,8 +1,6 @@
 #ifndef LOTTO_PROGRAM_LOTTOCLASSES_H
 #define LOTTO_PROGRAM_LOTTOCLASSES_H
 
-//this shouldn't be the main branch
-
 #include <vector>
 
 class PowerballNumberGenerator {
@@ -12,16 +10,16 @@ public:
 };
 
 
-class LottoGame {
+class Powerball {
 private:
-    std::vector<int> nums;
-    std::vector<int> ticket;
+    std::vector<int> jackpot;
+    std::vector<int> userTicket;
     int plays;
     int max_plays;
     PowerballNumberGenerator numberGenerator;
 
 public:
-    LottoGame();
+    Powerball();
     void startGame();
 };
 

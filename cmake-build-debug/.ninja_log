@@ -1,6 +1,20 @@
 # ninja log v5
-0	53	1708884148004951634	build.ninja	392f222ce140aa9
-0	283	1708883469913763759	CMakeFiles/Lotto_Program.dir/main.cpp.o	fcb60a2bb5ad0f2d
-1	354	1708736978108645946	CMakeFiles/Lotto_Program.dir/lotto_logic.cpp.o	aacafc78fa1196fc
-361	403	1708883470037825088	Lotto_Program	7496f688f2ccdea
 0	361	1708883469985886438	CMakeFiles/Lotto_Program.dir/lottologic.cpp.o	1dc8fb3cb5a94600
+361	403	1708883470037825088	Lotto_Program	7496f688f2ccdea
+1	354	1708736978108645946	CMakeFiles/Lotto_Program.dir/lotto_logic.cpp.o	aacafc78fa1196fc
+0	283	1708883469913763759	CMakeFiles/Lotto_Program.dir/main.cpp.o	fcb60a2bb5ad0f2d
+0	53	1708887654261653833	build.ninja	392f222ce140aa9
+0	47	1708887654261653833	build.ninja	392f222ce140aa9
+0	270	1708887654542878334	CMakeFiles/Lotto_Program.dir/main.cpp.o	fcb60a2bb5ad0f2d
+0	345	1708887654616873013	CMakeFiles/Lotto_Program.dir/lottologic.cpp.o	1dc8fb3cb5a94600
+345	386	1708887654660289042	Lotto_Program	7496f688f2ccdea
+0	275	1708888224907693529	CMakeFiles/Lotto_Program.dir/main.cpp.o	fcb60a2bb5ad0f2d
+0	347	1708888224980318579	CMakeFiles/Lotto_Program.dir/lottologic.cpp.o	1dc8fb3cb5a94600
+347	387	1708888225023192481	Lotto_Program	7496f688f2ccdea
+3	336	1708888404016719232	CMakeFiles/Lotto_Program.dir/lottologic.cpp.o	1dc8fb3cb5a94600
+336	377	1708888404061173790	Lotto_Program	7496f688f2ccdea
+4	354	1708888481868684064	CMakeFiles/Lotto_Program.dir/lottologic.cpp.o	1dc8fb3cb5a94600
+354	393	1708888481916528990	Lotto_Program	7496f688f2ccdea
+3	289	1708889674385954813	CMakeFiles/Lotto_Program.dir/main.cpp.o	fcb60a2bb5ad0f2d
+3	350	1708889674457575508	CMakeFiles/Lotto_Program.dir/lottologic.cpp.o	1dc8fb3cb5a94600
+350	393	1708889674504384736	Lotto_Program	7496f688f2ccdea

@@ -1,10 +1,8 @@
 #include "lottoclasses.h"
 #include <iostream>
 
-//this shouldn't be the main branch
-
 int main() {
-    LottoGame game;
+    Powerball game;
     game.startGame();
     return 0;
 }

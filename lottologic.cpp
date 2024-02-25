@@ -4,8 +4,6 @@
 #include <ctime>
 #include <algorithm>
 
-//this shouldn't be the main branch
-
 PowerballNumberGenerator::PowerballNumberGenerator() {
     srand(time(nullptr)); // Initialize random seed
 }
@@ -14,50 +12,50 @@ int PowerballNumberGenerator::generateNumber(int min, int max) {
     return rand() % (max - min + 1) + min;
 }
 
-LottoGame::LottoGame() : numberGenerator(PowerballNumberGenerator()) {
+Powerball::Powerball() : numberGenerator(PowerballNumberGenerator()) {
     plays = 0;
     // Use -1 for max_plays if no limit
     max_plays = -1;
 }
 
-void LottoGame::startGame() {
-    while (ticket.empty()) {
-        std::cout << "Processing ticket...\n\n";
+void Powerball::startGame() {
+    while (userTicket.empty()) {
+        std::cout << "Processing ticket..." << std::endl;
         while (true) {
             if (plays == max_plays)
                 exit(0);
-            int x = numberGenerator.generateNumber(1, 69);
-            int y = numberGenerator.generateNumber(1, 69);
-            int mega = numberGenerator.generateNumber(1, 26);
-            int mega_ticket = numberGenerator.generateNumber(1, 26);
+            int jackpotNumbers = numberGenerator.generateNumber(1, 69);
+            int userNumbers = numberGenerator.generateNumber(1, 69);
+            int jackpotMega = numberGenerator.generateNumber(1, 26);
+            int userMega = numberGenerator.generateNumber(1, 26);
             for (int n = 0; n < 5; ++n) {
-                if (std::find(nums.begin(), nums.end(), x) == nums.end() && nums.size() != 5)
-                    nums.push_back(x);
-                if (std::find(ticket.begin(), ticket.end(), y) == ticket.end() && ticket.size() != 5)
-                    ticket.push_back(y);
-                std::sort(nums.begin(), nums.end());
-                std::sort(ticket.begin(), ticket.end());
-                if (nums.size() == 5) {
-                    if (ticket.size() == 5) {
-                        if (nums != ticket) {
-                            if (mega != mega_ticket) {
+                if (std::find(jackpot.begin(), jackpot.end(), jackpotNumbers) == jackpot.end() && jackpot.size() != 5)
+                    jackpot.push_back(jackpotNumbers);
+                if (std::find(userTicket.begin(), userTicket.end(), userNumbers) == userTicket.end() && userTicket.size() != 5)
+                    userTicket.push_back(userNumbers);
+                std::sort(jackpot.begin(), jackpot.end());
+                std::sort(userTicket.begin(), userTicket.end());
+                if (jackpot.size() == 5) {
+                    if (userTicket.size() == 5) {
+                        if (jackpot != userTicket) {
+                            if (jackpotMega != userMega) {
                                 ++plays;
-                                nums.clear();
-                                ticket.clear();
-                                int mega_num = 0;
-                                int mega_ticket = 0;
+                                jackpot.clear();
+                                userTicket.clear();
+                                int jackpotMega = 0;
+                                int userMega = 0;
                             }
-                        } else if (nums == ticket) {
-                            if (mega == mega_ticket) {
+                        } else if (jackpot == userTicket) {
+                            if (jackpotMega == userMega) {
                                 ++plays;
-                                std::cout << "You won in " << plays << " tries!\n\n";
+                                std::cout << "You won in " << plays << " tries!" << std::endl;
                                 std::cout << "The winning numbers were: ";
-                                for (int i = 0; i < ticket.size(); ++i) {
-                                    std::cout << ticket[i];
-                                    if (i != ticket.size() - 1)
+                                for (int i = 0; i < userTicket.size(); ++i) {
+                                    std::cout << userTicket[i];
+                                    if (i != userTicket.size() - 1)
                                         std::cout << ", ";
                                 }
-                                std::cout << "\n";
+                                std::cout << std::endl;
                                 exit(0);
                             }
                         }
