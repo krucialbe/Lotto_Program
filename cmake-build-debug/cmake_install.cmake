@@ -1,4 +1,4 @@
-# Install script for directory: /Users/soundbysed/Library/CloudStorage/GoogleDrive-soundbysed@gmail.com/My Drive/Programming/C++/Portfolio/Lotto Program
+# Install script for directory: /Users/soundbysed/Library/CloudStorage/GoogleDrive-soundbysed@gmail.com/My Drive/Programming/C++/Portfolio/Lotto Sim/Lotto Program
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/soundbysed/Library/CloudStorage/GoogleDrive-soundbysed@gmail.com/My Drive/Programming/C++/Portfolio/Lotto Program/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/soundbysed/Library/CloudStorage/GoogleDrive-soundbysed@gmail.com/My Drive/Programming/C++/Portfolio/Lotto Sim/Lotto Program/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

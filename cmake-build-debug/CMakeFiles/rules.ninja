@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /Users/soundbysed/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S"/Users/soundbysed/Library/CloudStorage/GoogleDrive-soundbysed@gmail.com/My Drive/Programming/C++/Portfolio/Lotto Program" -B"/Users/soundbysed/Library/CloudStorage/GoogleDrive-soundbysed@gmail.com/My Drive/Programming/C++/Portfolio/Lotto Program/cmake-build-debug"
+  command = /Users/soundbysed/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S"/Users/soundbysed/Library/CloudStorage/GoogleDrive-soundbysed@gmail.com/My Drive/Programming/C++/Portfolio/Lotto Sim/Lotto Program" -B"/Users/soundbysed/Library/CloudStorage/GoogleDrive-soundbysed@gmail.com/My Drive/Programming/C++/Portfolio/Lotto Sim/Lotto Program/cmake-build-debug"
   description = Re-running CMake...
   generator = 1
 

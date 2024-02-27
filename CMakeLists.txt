@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_executable(Lotto_Program main.cpp
         lottoclasses.h
-        lottologic.cpp)
+        powerballlogic.cpp)

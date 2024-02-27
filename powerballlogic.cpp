@@ -194,6 +194,8 @@ void Powerball::startGame() {
                                         std::cout << numChoice
                                                   << " is already in the set. Please enter a unique number."
                                                   << std::endl;
+                                        --i;
+                                        continue; // Skip to the next iteration of the loop for the next number
                                     }
                                 }
 

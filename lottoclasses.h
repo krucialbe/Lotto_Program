@@ -17,8 +17,8 @@ public:
     }
 };
 
-
-class Powerball {           // Simulates Powerball game logic
+// Simulates Powerball game logic
+class Powerball {
 private:
     std::set<int> jackpot;
     int jackpotMega;
