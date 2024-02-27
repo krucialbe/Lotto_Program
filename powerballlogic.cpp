@@ -16,8 +16,8 @@ void Powerball::startGame() {
         bool keepPlaying = true;        // Variables used for staying in
         bool validChoice = false;       // and exiting loop validation
         std::cout
-                << "Select an option: \n1. Play draw\n2. Quick play\n3. Pick numbers\n"
-                   "4. Check ticket\n5. Set play limit\n6. Check play limit\n0. Exit"
+                << "Select an option: \n1. Play\n2. Quick play\n3. Pick numbers\n"
+                   "4. Check ticket\n5. Set play limit\n6. Check play limit\n7. Top Numbers\n0. Exit"
                 << std::endl;
         std::cout << "=> ";
         std::cin >> numChoice;
@@ -33,16 +33,19 @@ void Powerball::startGame() {
                     // Game only starts if user has selected a ticket
                     if (!userTicket.empty() && num > 0) {
                         clearJackpot();         // Clears jackpot member variable so new jackpot can be created
+                        clearMaps();
                         std::cout << "Processing ticket...\n" << std::endl;
                         // Loop to keep generating new draws until a match is found
                         while (keepPlaying && plays != maxPlays) {
                             int jackpotNumbers = numberGenerator.generateNumber(1, 69);
                             int jackpotMega = numberGenerator.generateNumber(1, 26);
+                            megaMap[jackpotMega]++;         // Tallies the amount of times a number is used for the mega number
                             // Adds numbers to jackpot until 5 are selected
                             for (int n = 0; n < 5; ++n) {
                                 if (std::find(jackpot.begin(), jackpot.end(), jackpotNumbers)
                                     == jackpot.end() && jackpot.size() != 5) {
                                     jackpot.insert(jackpotNumbers);
+                                    numMap[jackpotNumbers]++;           // Tallies the amount of times a number is used for the jackpot
                                 }
                             }
                             // When jackpot has enough numbers
@@ -84,16 +87,19 @@ void Powerball::startGame() {
                     setUserTicket(nums);            // Set User ticker
                     setUserMega(num);           // Set Mega Ball number
                     clearJackpot();         // Clears jackpot member variable so new jackpot can be created
+                    clearMaps();
                     std::cout << "Processing ticket...\n" << std::endl;
                     // Loop to keep generating new draws until a match is found
                     while (keepPlaying && plays != maxPlays) {
                         int jackpotNumbers = numberGenerator.generateNumber(1, 69);
                         int jackpotMega = numberGenerator.generateNumber(1, 26);
+                        megaMap[jackpotMega]++;         // Tallies the amount of times a number is used for the mega number
                         // Adds numbers to jackpot until 5 are selected
                         for (int n = 0; n < 5; ++n) {
                             if (std::find(jackpot.begin(), jackpot.end(), jackpotNumbers)
                                 == jackpot.end() && jackpot.size() != 5) {
                                 jackpot.insert(jackpotNumbers);
+                                numMap[jackpotNumbers]++;           // Tallies the amount of times a number is used for the jackpot
                             }
                         }
                         // When jackpot has enough numbers
@@ -289,6 +295,9 @@ void Powerball::startGame() {
                     break;
                 case 6:         // Check play limit (displays current limit, default is infinite)
                     getMaxPlays();          // Prints out the number of plays the program will check before a win
+                    break;
+                case 7:         // Top Numbers (Displays the top 5 most used numbers and mega numbers in the last play)
+                    printTop5();
                     break;
                 case 0:        // Exit
                     exit(0);
